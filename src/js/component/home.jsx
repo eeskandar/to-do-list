@@ -17,19 +17,6 @@ const Home = () => {
 		}
 	}
 
-	// for mapping
-	const Mapping = list.map((task, i) => {
-			return (
-					<li key={i} className={`list-group-item col-md-8 col-lg-6 mx-auto border-0 mt-1 bg-dark text-white`} 
-					onMouseEnter={(event) => setClosing(true)} onMouseLeave={(event) => setClosing(false)}>
-						{task}
-						<button key={i} type="button"
-						className={`btn-close btn-close-white float-end ${closing? "" : "invisible"}`}
-						onClick={(event) => deleteTask(i)}></button>
-					</li>
-			)
-		})	
-	
 	// for deleting
 	function deleteTask (i) {
 		const newTask = list.filter((task, index)=> {
@@ -43,6 +30,19 @@ const Home = () => {
 			}
 			setList(newTask)
 	}
+
+	// for mapping
+	const Mapping = list.map((task, i) => {
+		return (
+				<li key={i} className={`list-group-item col-md-8 col-lg-6 mx-auto border-0 mt-1 bg-dark text-white`} 
+				onMouseEnter={(event) => setClosing(true)} onMouseLeave={(event) => setClosing(false)}>
+					{task}
+					<button key={i} type="button"
+					className={`btn-close btn-close-white float-end ${closing? "" : "invisible"}`}
+					onClick={(event) => deleteTask(i)}></button>
+				</li>
+		)
+	})	
 
 	// display
 	return (
