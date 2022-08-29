@@ -20,11 +20,11 @@ const Home = () => {
 	// for mapping
 	const Mapping = list.map((task, i) => {
 			return (
-					<li key={i} className="list-group-item col-10 mx-auto" 
+					<li key={i} className={`list-group-item col-md-8 col-lg-6 mx-auto border-0 mt-1 bg-dark text-white`} 
 					onMouseEnter={(event) => setClosing(true)} onMouseLeave={(event) => setClosing(false)}>
 						{task}
 						<button key={i} type="button"
-						className={`btn-close float-end ${closing? "" : "invisible"}`}
+						className={`btn-close btn-close-white float-end ${closing? "" : "invisible"}`}
 						onClick={(event) => deleteTask(i)}></button>
 					</li>
 			)
@@ -47,23 +47,27 @@ const Home = () => {
 	// display
 	return (
 		<div className="container-fluid">
-			<h1 className="row justify-content-center">ToDos</h1>
-			<div className="row col-10 mx-auto">
+			<div className="mt-3 mb-4">
+				<div className="row justify-content-center text-white fs-1 fw-bolder">The Best Way to Do</div>
+				<div className="d-flex justify-content-center text-white fs-1 fw-bolder">Your <i className="ps-2">ToDos</i></div>
+			</div>
+			<div className="row col-md-8 col-lg-6 mx-auto">
 					<input id="tasker" 
 					type="text"
-					className="form-control" 
+					className="list-group-item rounded-top shadow border-0" 
 					onChange={(event) => {setStuffs(event.target.value)}} 
 					value = {stuffs}
 					onKeyDown={submit}
-					placeholder="What needs to be done"></input>
+					placeholder="What do you need to do?"></input>
 			</div>
 			<div>
 				{waiting? (
-					<div className="list-group-item col-10 mx-auto border-0 disabled">Try adding a new task! 😎</div>
+					<div className="text-white list-group-item col-md-8 col-lg-6 mx-auto border-0 disabled bg-transparent mt-1">Try adding a new task! 😎</div>
 				) : (
 				<ul className="p-0">
 					{Mapping}
-					<div className="list-group-item col-10 mx-auto border-0 disabled">I know you can do it! Only {list.length} left to go!</div>
+					<div className="list-end col-md-8 col-lg-6 mx-auto bg-dark text-white rounded-bottom"></div>
+					<div className="text-white list-group-item col-md-8 col-lg-6 mx-auto border-0 disabled bg-transparent mt-1">I know you can do it! Only {list.length} left to go!</div>
 				</ul>)}
 			</div>
 		</div>
