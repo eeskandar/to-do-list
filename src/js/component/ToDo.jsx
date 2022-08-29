@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const Home = () => {
+export const ToDo = () => {
 
 	const [stuffs, setStuffs] = useState('')
 	const [closing, setClosing] = useState(false)
@@ -73,7 +73,5 @@ const Home = () => {
 		</div>
 	);
 };
-
-export default Home;
 
 // gracias por tanto y disculpen por tan poco, caballeros 😥
