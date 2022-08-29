@@ -21,6 +21,10 @@ body {
     width: 600px;
 }
 
+.list-group-item {
+    height:40px;
+}
+
 .list-end {
     height: 7px;
 }
