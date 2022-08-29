@@ -48,8 +48,8 @@ export const ToDo = () => {
 	return (
 		<div className="container-fluid">
 			<div className="mt-3 mb-4">
-				<div className="row justify-content-center text-white fs-1 fw-bolder">The Best Way to Do</div>
-				<div className="d-flex justify-content-center text-white fs-1 fw-bolder">Your <i className="ps-2">ToDos</i></div>
+				<div className="row justify-content-center text-white fs-1 fw-bolder">The Best Way to Know what to Do</div>
+				<div className="d-flex justify-content-center text-white fs-1 fw-bolder">Is to Write Your <i className="ps-2">ToDos</i></div>
 			</div>
 			<div className="row col-md-8 col-lg-6 mx-auto">
 					<input id="tasker" 
