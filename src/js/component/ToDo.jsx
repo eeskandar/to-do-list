@@ -55,7 +55,7 @@ export const ToDo = () => {
 			<div className="row col-md-8 col-lg-6 mx-auto">
 					<input id="tasker" 
 					type="text"
-					className="list-group-item rounded-top shadow border-0" 
+					className={`list-group-item shadow border-0 ${waiting? "rounded" : "rounded-top"}`}
 					onChange={(event) => {setStuffs(event.target.value)}} 
 					value = {stuffs}
 					onKeyDown={submit}
@@ -67,7 +67,7 @@ export const ToDo = () => {
 				) : (
 				<ul className="p-0">
 					{Mapping}
-					<div className="list-end col-md-8 col-lg-6 mx-auto bg-dark text-white rounded-bottom"></div>
+					<div className="list-end col-md-8 col-lg-6 mx-auto text-white rounded-bottom shadow"></div>
 					<div className="text-white list-group-item col-md-8 col-lg-6 mx-auto border-0 disabled bg-transparent mt-1">I know you can do it! Only {list.length} left to go!</div>
 				</ul>)}
 			</div>

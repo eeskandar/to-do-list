@@ -27,4 +27,5 @@ body {
 
 .list-end {
     height: 7px;
+	background: linear-gradient(rgb(33,37,41), rgb(154, 68, 172))
 }
