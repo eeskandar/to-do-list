@@ -25,6 +25,14 @@ body {
     height:40px;
 }
 
+.invi-button {
+	display: none;
+}
+
+.show-button:hover>.invi-button {
+	display: block;
+}
+
 .list-end {
     height: 7px;
 	background: linear-gradient(rgb(33,37,41), rgb(154, 68, 172))
