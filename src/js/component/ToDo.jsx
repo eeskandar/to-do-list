@@ -46,8 +46,7 @@ export const ToDo = () => {
 	return (
 		<div className="container-fluid">
 			<div className="mt-3 mb-4">
-				<div className="row justify-content-center text-white fs-1 fst-italic fw-bolder">"The Best Way to Know what to Do</div>
-				<div className="row justify-content-center text-white fs-1 fst-italic fw-bolder">Is to Write Your ToDos"</div>
+				<div className="row justify-content-center text-white fs-1 fst-italic fw-bolder text-center">"The Best Way to Know What to Do <br></br> Is to Write Your ToDos"</div>
 				<div className="row text-white justify-content-center fst-italic">-Someone, at some point (maybe)-</div>
 			</div>
 			<div className="row col-sm-8 col-md-8 col-lg-6 mx-auto">
@@ -61,12 +60,12 @@ export const ToDo = () => {
 			</div>
 			<div>
 				{waiting? (
-					<div className="text-white list-group-item col-8 col-lg-6 mx-auto border-0 disabled bg-transparent mt-1">Try adding a new task! 😎</div>
+					<div className="text-white list-group-item col-sm-8 col-md-8 col-lg-6 mx-auto border-0 disabled bg-transparent mt-1">Try adding a new task! 😎</div>
 				) : (
 				<ul className="p-0">
 					{Mapping}
-					<div className="list-end col-8 col-lg-6 mx-auto text-white rounded-bottom shadow"></div>
-					<div className="text-white list-group-item col-8 col-lg-6 mx-auto border-0 disabled bg-transparent mt-1">I know you can do it! Only {list.length} left to go!</div>
+					<div className="list-end col-sm-8 col-md-8 col-lg-6 mx-auto text-white rounded-bottom shadow"></div>
+					<div className="text-white list-group-item col-sm-8 col-md-8 col-lg-6 mx-auto border-0 disabled bg-transparent mt-1">I know you can do it! Only {list.length} left to go!</div>
 				</ul>)}
 			</div>
 		</div>
