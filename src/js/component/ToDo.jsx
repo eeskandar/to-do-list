@@ -15,6 +15,7 @@ export const ToDo = () => {
 			setStuffs('')
 		}
 		if(event.key === "Enter" && stuffs.trim() == ""){
+			alert("Not sure what to add? Take it easy, I know you will think of something")
 			setStuffs('')
 		}
 	}
@@ -23,7 +24,9 @@ export const ToDo = () => {
 	function deleteTask (i) {
 		const newTask = list.filter((task, index)=> {
 			if (task == list[i]) {
+				if(list.indexOf(task) == index) { 
 				return false
+				}
 			}
 			return true
 		})
