@@ -9,9 +9,12 @@ export const ToDo = () => {
 	
 	// for submitting
 	function submit (event) {
-		if(event.key === "Enter" && stuffs !== "") {
+		if(event.key === "Enter" && stuffs.trim() !== "") {
 			setWaiting(false)
 			setList([...list, stuffs])
+			setStuffs('')
+		}
+		if(event.key === "Enter" && stuffs.trim() == ""){
 			setStuffs('')
 		}
 	}
